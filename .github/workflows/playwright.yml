@@ -21,7 +21,7 @@ jobs:
         run: npm test
       - uses: actions/upload-artifact@master
         with:
-          name: allure-results
+          name: allure-report
           run: npm allure:generate
           path: allure-report
           retention-days: 20
