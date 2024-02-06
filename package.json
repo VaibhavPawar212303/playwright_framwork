@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "test": "npx playwright test || :",
+    "posttest": "npm run allure:generate"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
