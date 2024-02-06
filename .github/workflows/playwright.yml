@@ -19,10 +19,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npm test
-      - name: Generate report
-        run: allure generate ./allure-results -o allure-report --clean
       - uses: actions/upload-artifact@master
         with:
-          name: allure-report
-          path: ./allure-report
+          name: allure-results
+          path: allure-results
           retention-days: 20
